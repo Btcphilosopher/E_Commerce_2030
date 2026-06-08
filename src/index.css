@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Let overrides translate yellow/amber assets directly into luxury gold */
+  --color-amber-50: #fdfbf7;
+  --color-amber-100: #f9f4e6;
+  --color-amber-200: #f1e4c7;
+  --color-amber-300: #e4cd9d;
+  --color-amber-400: #d4b474;
+  --color-amber-500: #c1a35f;
+  --color-amber-600: #a98a49;
+  --color-amber-700: #8d7039;
+  --color-amber-800: #71572d;
+  --color-amber-900: #584323;
+  --color-amber-950: #3c2d16;
+
+  /* Fine luxury greys and charcoal overrides */
+  --color-slate-900: #121212;
+  --color-slate-950: #0a0a0a;
+}
+
+/* Custom glow effects and adjustments for Sophisticated Dark design */
+body {
+  background-color: #0a0a0a;
+  color: #f5f2ed;
+  font-family: var(--font-sans);
+}
+
+.gold-border-corner {
+  position: relative;
+}
+
+.gold-border-corner::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-top: 1.5px solid #c1a35f;
+  border-l: 1.5px solid #c1a35f;
+  pointer-events: none;
+}
+
+.gold-border-corner::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 1.5px solid #c1a35f;
+  border-r: 1.5px solid #c1a35f;
+  pointer-events: none;
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(193, 163, 95, 0.12);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(193, 163, 95, 0.08);
+}
+
+.glow-border-gold {
+  border-color: rgba(193, 163, 95, 0.3);
+}
+
+.glass-panel {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(26, 26, 26, 0.85);
+  border-color: rgba(193, 163, 95, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

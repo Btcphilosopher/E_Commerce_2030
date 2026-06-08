@@ -1,0 +1,6 @@
+{
+  "name": "Amazon 2030",
+  "description": "A high-fidelity futuristic recreation of Amazon in the year 2030, featuring interactive shopping grids, responsive checkout, smart product modals, and an AI Shopping Assistant powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
